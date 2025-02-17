@@ -1,0 +1,14 @@
+digraph G {
+    node [shape=record];
+
+    Users [label="<f0> Users|<f1> user_id: INTEGER PRIMARY KEY AUTOINCREMENT|<f2> name: VARCHAR(255) NOT NULL|<f3> age: INTEGER|<f4> gender: VARCHAR(50)|<f5> contact_details: VARCHAR(255)|<f6> university_id: VARCHAR(100) UNIQUE NOT NULL|<f7> username: VARCHAR(100) UNIQUE NOT NULL|<f8> password: VARCHAR(255) NOT NULL"];
+    WorkoutLogs [label="<f0> WorkoutLogs|<f1> workout_id: INTEGER PRIMARY KEY AUTOINCREMENT|<f2> user_id: INTEGER NOT NULL|<f3> workout_type: VARCHAR(100) NOT NULL|<f4> duration: INTEGER NOT NULL|<f5> intensity: VARCHAR(50)|<f6> date: DATE NOT NULL"];
+    NutritionLogs [label="<f0> NutritionLogs|<f1> nutrition_id: INTEGER PRIMARY KEY AUTOINCREMENT|<f2> user_id: INTEGER NOT NULL|<f3> food_item: VARCHAR(255) NOT NULL|<f4> quantity: VARCHAR(100)|<f5> calories: INTEGER|<f6> date: DATE NOT NULL"];
+    SleepPatterns [label="<f0> SleepPatterns|<f1> sleep_id: INTEGER PRIMARY KEY AUTOINCREMENT|<f2> user_id: INTEGER NOT NULL|<f3> duration: INTEGER NOT NULL|<f4> quality: VARCHAR(100)|<f5> date: DATE NOT NULL"];
+    HealthMetrics [label="<f0> HealthMetrics|<f1> metric_id: INTEGER PRIMARY KEY AUTOINCREMENT|<f2> user_id: INTEGER NOT NULL|<f3> weight: FLOAT|<f4> BMI: FLOAT|<f5> heart_rate: INTEGER|<f6> blood_pressure: VARCHAR(100)|<f7> date: DATE NOT NULL"];
+
+    Users:f1 -> WorkoutLogs:f2 [label="FOREIGN KEY"];
+    Users:f1 -> NutritionLogs:f2 [label="FOREIGN KEY"];
+    Users:f1 -> SleepPatterns:f2 [label="FOREIGN KEY"];
+    Users:f1 -> HealthMetrics:f2 [label="FOREIGN KEY"];
+}
