@@ -16,10 +16,6 @@ This repository showcases SQL projects developed during the CS162: Software Deve
 ## **Project Structure**
 - Each project folder contains SQL scripts, data files, and documentation detailing the project's objectives, design, and queries.
 
-## **How to Run**
-- Import provided SQL scripts into your database system.
-- Follow project-specific README files for instructions.
-
 ---
 This portfolio demonstrates hands-on experience in designing and managing relational databases, writing optimized SQL queries, and ensuring data integrity.
 
